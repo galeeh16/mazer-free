@@ -11,7 +11,8 @@
 @import "~bootstrap/scss/functions";
 
 $theme-colors-light: (
-  'primary': #ebf3ff,
+  'primary': rgba(19, 131, 133, 16%),
+  // 'primary': #ff0000,
   'secondary': #E6EAEE,
   'success': #D2FFE8 ,
   'danger': #FFDEDE,
@@ -20,24 +21,24 @@ $theme-colors-light: (
 );
 $alert-colors: (
     primary: (
-        text-color: #fff,
-        background-color: #435ebe
+        text-color: #0c9aff,
+        background-color: rgba(12, 154, 255, 0.19)
     ),
     secondary: (
         text-color: #383d41,
         background-color: #ebeef3
     ),
     success: (
-        text-color: #fff,
-        background-color: #4fbe87   
+        text-color: #4fbe87,
+        background-color: rgba(79, 190, 135, 20%)
     ),
     warning: (
         text-color: #fff,
         background-color: #eaca4a,
     ),
     danger: (
-        text-color: #fff,
-        background-color: #f3616d,
+        text-color: #f3616d,
+        background-color: rgba(243, 97, 109, 20%),
     ),
     dark: (
         text-color: #fff,
@@ -48,8 +49,8 @@ $alert-colors: (
         background-color: #f9f9f9,
     ),
     info: (
-        text-color: #fff,
-        background-color: #56b6f7,
+        text-color: #9b20e8,
+        background-color: rgba(155, 32, 232, 0.19),
     ),
 );
 $card-box-shadow:                   -8px 12px 18px 0 rgba(25,42,70,.13);
@@ -60,7 +61,7 @@ $modal-header-font-size:            1.1rem;
 $white:    #fff !default;
 $gray-100: #f8f9fa !default;
 $gray-200: #e9ecef !default;
-$gray-300: #dee2e6 !default;
+$gray-300: #ecf0f3 !default;
 $gray-400: #ced4da !default;
 $gray-500: #adb5bd !default;
 $gray-600: #6c757d !default;
@@ -83,7 +84,8 @@ $grays: (
 ) !default;
 // fusv-enable
 
-$blue:    #435ebe !default;
+// $blue:    #0c9aff !default;
+$blue:    #d99d25 !default;
 $indigo:  #6610f2 !default;
 $purple:  #6f42c1 !default;
 $pink:    #d63384 !default;
@@ -315,8 +317,8 @@ $position-values: (
 //
 // Settings for the `<body>` element.
 
-$body-bg:                   #f2f7ff !default;
-$body-color:                #607080 !default;
+$body-bg:                   #f8fafb !default;
+$body-color:                #475569 !default;
 $body-text-align:           null !default;
 
 
@@ -445,10 +447,10 @@ $aspect-ratios: (
 // Font, line-height, and color for body text, headings, and more.
 
 // stylelint-disable value-keyword-case
-$font-family-sans-serif:      system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$font-family-sans-serif:      "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
 $font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 // stylelint-enable value-keyword-case
-$font-family-base:            "Nunito";
+$font-family-base:            "Inter", "Poppins", sans-serif;
 $font-family-code:            var(--#{$variable-prefix}font-monospace) !default;
 
 // $font-size-root effects the value of `rem`, which is used for as well font sizes, paddings and margins
@@ -491,9 +493,9 @@ $font-sizes: (
 $headings-margin-bottom:      math.div($spacer, 2) !default;
 $headings-font-family:        null !default;
 $headings-font-style:         null !default;
-$headings-font-weight:        700 !default;
+$headings-font-weight:        500 !default;
 $headings-line-height:        1.2 !default;
-$headings-color:              #25396f !default;
+$headings-color:              #334155 !default;
 
 // scss-docs-start display-headings
 $display-font-sizes: (
@@ -652,9 +654,11 @@ $btn-border-width:            $input-btn-border-width !default;
 $btn-font-weight:             $font-weight-normal !default;
 $btn-box-shadow:              inset 0 1px 0 rgba($white, .15), 0 1px 1px rgba($black, .075) !default;
 $btn-focus-width:             $input-btn-focus-width !default;
-$btn-focus-box-shadow:        $input-btn-focus-box-shadow !default;
+// $btn-focus-box-shadow:        $input-btn-focus-box-shadow !default;
+$btn-focus-box-shadow:        none !default;
 $btn-disabled-opacity:        .65 !default;
-$btn-active-box-shadow:       inset 0 3px 5px rgba($black, .125) !default;
+// $btn-active-box-shadow:       inset 0 3px 5px rgba($black, .125) !default;
+$btn-active-box-shadow:       none !default;
 
 $btn-link-color:              $link-color !default;
 $btn-link-hover-color:        $link-hover-color !default;
@@ -713,7 +717,8 @@ $input-disabled-border-color:           null !default;
 $input-color:                           $body-color !default;
 $input-border-color:                    #dce7f1 !default;
 $input-border-width:                    $input-btn-border-width !default;
-$input-box-shadow:                      $box-shadow-inset !default;
+// $input-box-shadow:                      $box-shadow-inset !default;
+$input-box-shadow:                      none !default;
 
 $input-border-radius:                   $border-radius !default;
 $input-border-radius-sm:                $border-radius-sm !default;
@@ -723,9 +728,11 @@ $input-focus-bg:                        $input-bg !default;
 $input-focus-border-color:              tint-color($component-active-bg, 50%) !default;
 $input-focus-color:                     $input-color !default;
 $input-focus-width:                     $input-btn-focus-width !default;
-$input-focus-box-shadow:                $input-btn-focus-box-shadow !default;
+// $input-focus-box-shadow:                $input-btn-focus-box-shadow !default;
+$input-focus-box-shadow:                none !default;
 
-$input-placeholder-color:               $gray-600 !default;
+// $input-placeholder-color:               $gray-600 !default;
+$input-placeholder-color:               #acbacd !default;
 $input-plaintext-color:                 $body-color !default;
 
 $input-height-border:                   $input-border-width * 2 !default;
@@ -792,8 +799,8 @@ $form-check-inline-margin-end:    1rem !default;
 $input-group-addon-padding-y:           $input-padding-y !default;
 $input-group-addon-padding-x:           $input-padding-x !default;
 $input-group-addon-font-weight:         $input-font-weight !default;
-$input-group-addon-color:               #526e8a  !default;
-$input-group-addon-bg:                  #e6eef5 !default;
+$input-group-addon-color:               $body-color  !default;
+$input-group-addon-bg:                  #edf2f5 !default;
 $input-group-addon-border-color:        #dce7f1 !default;
 
 $form-select-padding-y:             $input-padding-y !default;
@@ -821,11 +828,13 @@ $form-select-feedback-icon-size:        $input-height-inner-half $input-height-i
 $form-select-border-width:        $input-border-width !default;
 $form-select-border-color:        $input-border-color !default;
 $form-select-border-radius:       $border-radius !default;
-$form-select-box-shadow:          $box-shadow-inset !default;
+// $form-select-box-shadow:          $box-shadow-inset !default;
+$form-select-box-shadow:          none !default;
 
 $form-select-focus-border-color:  $input-focus-border-color !default;
 $form-select-focus-width:         $input-focus-width !default;
-$form-select-focus-box-shadow:    0 0 0 $form-select-focus-width $input-btn-focus-color !default;
+// $form-select-focus-box-shadow:    0 0 0 $form-select-focus-width $input-btn-focus-color !default;
+$form-select-focus-box-shadow:    none !default;
 
 $form-select-padding-y-sm:        $input-padding-y-sm !default;
 $form-select-padding-x-sm:        $input-padding-x-sm !default;
@@ -987,7 +996,7 @@ $dropdown-font-size:                $font-size-base !default;
 $dropdown-color:                    $body-color !default;
 $dropdown-bg:                       $white !default;
 $dropdown-border-color:             rgba($black, .15) !default;
-$dropdown-border-radius:            $border-radius !default;
+$dropdown-border-radius:            0.7rem !default;
 $dropdown-border-width:             0 !default;
 $dropdown-inner-border-radius:      subtract($dropdown-border-radius, $dropdown-border-width) !default;
 $dropdown-divider-bg:               rgb(189, 199, 209) !default;
@@ -1187,7 +1196,7 @@ $toast-header-border-color:         rgba(0, 0, 0, .05) !default;
 // Badges
 
 $badge-font-size:                   .85em !default;
-$badge-font-weight:                 $font-weight-bold !default;
+$badge-font-weight:                 500 !default;
 $badge-color:                       $white !default;
 $badge-padding-y:                   .35em !default;
 $badge-padding-x:                   .65em !default;

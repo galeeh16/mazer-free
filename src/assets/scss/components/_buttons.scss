@@ -33,7 +33,8 @@
     @each $key, $value in $theme-colors-light {
         &.btn-light-#{$key} {
             background-color: $value;
-            color: darken($value,80%)
+            // color: darken($value,80%)
+            color: $key
         }
     }
     
